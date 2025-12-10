@@ -44,3 +44,17 @@ adrNode findNode(adrNode root, string nama) {
     }
     return findNode(root->nextSibling, nama);
 }
+
+void postOrder(adrNode root){
+    if (root == nullptr) return;
+    postOrder(root->firstChild);
+    cout << root->info.nama << " - ";
+    postOrder(root->nextSibling);
+}
+
+void inOrder(adrNode root){
+    if (root == NULL) return;
+    inOrder(root->firstChild);
+    cout << root->info.nama << " - ";
+    inOrder(root->nextSibling);
+}
