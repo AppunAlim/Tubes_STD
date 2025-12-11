@@ -19,11 +19,12 @@ struct Node {
 
 adrNode newNode(string nama, string tipe);
 void insertNode(adrNode parent, string nama, string tipe);
-void printTree(adrNode root, int level);
+void levelOrder(adrNode root, int level);
 void preOrder(adrNode root);
 void postOrder(adrNode root);
 void inOrder(adrNode root);
 adrNode findNode(adrNode root, string nama);
+void menu();
 
 
 #endif // HEADER_H_INCLUDED
