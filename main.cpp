@@ -5,17 +5,16 @@ using namespace std;
 
 int main()
 {
-
     adrNode root = newNode("My Music Library", "Root");
 
     int pilihan;
     string namaBaru, namaInduk;
     adrNode lokasiInduk = nullptr;
 
-
     do {
         menu();
         cin >> pilihan;
+
         switch(pilihan) {
         case 1:
             cout << "Masukkan Nama Genre: ";

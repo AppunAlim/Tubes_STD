@@ -61,7 +61,6 @@ void inOrder(adrNode root){
 
 void levelOrder(adrNode root, int level){
     if (root == nullptr) return;
-
     for (int i = 0; i < level; i++){
         cout << "   ";
     }
@@ -76,7 +75,7 @@ void levelOrder(adrNode root, int level){
         cout << "          |-> [Lagu] ";
     }
     cout << root->info.nama << endl;
-    levelOrder(root->firstChild, level + 1);
+    levelOrder(root->firstChild, level);
     levelOrder(root->nextSibling, level);
 }
 
@@ -88,6 +87,7 @@ void preOrder(adrNode root){
 }
 
 void menu(){
+
     cout << "\n=====Menu Playlist=====" << endl;
     cout << "1. Tambah Genre" << endl;
     cout << "2. Tambah Artist" << endl;

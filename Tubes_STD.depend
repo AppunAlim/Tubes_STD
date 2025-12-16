@@ -1,4 +1,5 @@
 # depslib dependency file v1.0
+<<<<<<< HEAD
 1765899847 source:c:\affan punya\coding\c++\tubes_std\main.cpp
 	<iostream>
 	"header.h"
@@ -8,5 +9,12 @@
 
 1765899790 source:c:\affan punya\coding\c++\tubes_std\source.cpp
 	"header.h"
+=======
+1765412272 source:d:\tp1\tubes_std\tubes_std\main.cpp
+	<iostream>
+	"header.h"
+
+1765412045 d:\tp1\tubes_std\tubes_std\header.h
+>>>>>>> 4ab60a337ac1e5c2ed082a501322847df0bea57e
 	<iostream>
 
