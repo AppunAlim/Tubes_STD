@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1765899847 source:c:\affan punya\coding\c++\tubes_std\main.cpp
+	<iostream>
+	"header.h"
+
+1765899705 c:\affan punya\coding\c++\tubes_std\header.h
+	<iostream>
+
+1765899790 source:c:\affan punya\coding\c++\tubes_std\source.cpp
+	"header.h"
+	<iostream>
+

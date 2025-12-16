@@ -15,7 +15,7 @@ adrNode newNode(string nama, string tipe) {
 
 void insertNode(adrNode parent, string nama, string tipe) {
     if (parent == nullptr){
-        return nullptr;
+        return;
     }
 
     adrNode pBaru = newNode(nama, tipe);
@@ -36,11 +36,64 @@ adrNode findNode(adrNode root, string nama) {
         return nullptr;
     }
     if (root->info.nama == nama){
-        return root
+        return root;
     }
     adrNode hasil = findNode(root->firstChild, nama);
     if (hasil != nullptr) {
         return hasil;
     }
     return findNode(root->nextSibling, nama);
+}
+
+void postOrder(adrNode root){
+    if (root == nullptr) return;
+    postOrder(root->firstChild);
+    cout << root->info.nama << " - ";
+    postOrder(root->nextSibling);
+}
+
+void inOrder(adrNode root){
+    if (root == nullptr) return;
+    inOrder(root->firstChild);
+    cout << root->info.nama << " - ";
+    inOrder(root->nextSibling);
+}
+
+void levelOrder(adrNode root, int level){
+    if (root == nullptr) return;
+
+    for (int i = 0; i < level; i++){
+        cout << "   ";
+    }
+
+    if (root->info.tipe == "Genre"){
+        cout << "[Genre] ";
+    } else if (root->info.tipe == "Artist"){
+        cout << "|-> [Artist] ";
+    } else if (root->info.tipe == "Album"){
+        cout << "     |-> [Album] ";
+    } else {
+        cout << "          |-> [Lagu] ";
+    }
+    cout << root->info.nama << endl;
+    levelOrder(root->firstChild, level + 1);
+    levelOrder(root->nextSibling, level);
+}
+
+void preOrder(adrNode root){
+    if (root == nullptr) return;
+    cout << root->info.nama << " - ";
+    preOrder(root->firstChild);
+    preOrder(root->nextSibling);
+}
+
+void menu(){
+    cout << "\n=====Menu Playlist=====" << endl;
+    cout << "1. Tambah Genre" << endl;
+    cout << "2. Tambah Artist" << endl;
+    cout << "3. Tambah Album" << endl;
+    cout << "4. Tambah Lagu" << endl;
+    cout << "5. Tampilkan Playlist" << endl;
+    cout << "0. Exit" << endl;
+    cout << "Pilihan: ";
 }
