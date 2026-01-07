@@ -93,7 +93,10 @@ void menu(){
     cout << "2. Tambah Artist" << endl;
     cout << "3. Tambah Album" << endl;
     cout << "4. Tambah Lagu" << endl;
-    cout << "5. Tampilkan Playlist" << endl;
+    cout << "5. Tampilkan Playlist (levelorder)" << endl;
+    cout << "6. Tampilkan Playlist (preorder)" << endl;
+    cout << "7. Tampilkan Playlist (inorder)" << endl;
+    cout << "8. Tampilkan Playlist (postorder)" << endl;
     cout << "0. Exit" << endl;
     cout << "Pilihan: ";
 }

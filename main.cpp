@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 #include "header.h"
 
 using namespace std;
@@ -14,7 +15,7 @@ int main()
     do {
         menu();
         cin >> pilihan;
-
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         switch(pilihan) {
         case 1:
             cout << "Masukkan Nama Genre: ";
@@ -70,6 +71,21 @@ int main()
         case 5:
             cout << "\n=== Tampilan Playlist ===" << endl;
             levelOrder(root->firstChild, 0);
+            break;
+
+         case 6:
+            cout << "\n=== Tampilan PreOrder ===" << endl;
+            preOrder(root);
+            break;
+
+         case 7:
+            cout << "\n=== Tampilan InOrder ===" << endl;
+            inOrder(root);
+            break;
+
+         case 8:
+            cout << "\n=== Tampilan PostOrder ===" << endl;
+            postOrder(root);
             break;
 
         case 0:
